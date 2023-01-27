@@ -48,7 +48,7 @@ Debug:
     ├── profiling.py - profiling example
     ├── README.md - project information
     ├── sequential.py - sequential example
-    ├── special_parameters.py - specialparameters example
+    ├── special_parameters.py - special parameters example
     ├── timing.py - timing example
     └── Vector2DTests.py - Vector 2D example
 
