@@ -1,21 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def my_func(x_value: list):
-    """add 1 every iteration in the range
-    """
-    val_f = 1
-    for i in x_value:
-        val_f += 1
-    return val_f
+"""module demonstrates function attributes
+"""
 
-def print_function_output(func, **kwargs):
-    """print out arguments
-    """
-    print(func(**kwargs))
-
-def grow_list(val, my_list=None):
-    """grow a list of values
+def grow_list(val=None, my_list=None):
+    """append a list with values
     """
     if my_list:
         my_list.append(val)
@@ -26,13 +16,12 @@ def grow_list(val, my_list=None):
 def main():
     """main program
     """
-    # print_function_output(my_func, val=10)
-    my_func([1,2,3,4])
-    print(dir(grow_list))
-    print(grow_list.__defaults__)
-    print(grow_list.__name__)
-    print(grow_list.__code__.co_argcount)
-    print(grow_list.__code__.co_varnames)
+    print(dir(grow_list)) # return all function attributes
+    print(grow_list.__name__) # return function name
+    print(grow_list.__doc__) # return function docstring
+    print(grow_list.__defaults__) # return all default values of function parameters    
+    print(grow_list.__code__.co_argcount) # return number of arguments
+    print(grow_list.__code__.co_varnames) # return all paramter names
 
 if __name__ == "__main__":
     main()

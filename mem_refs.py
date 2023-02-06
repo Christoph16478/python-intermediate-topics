@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-"""Print out memory address of variable values
+"""print out memory address of variable values
 """
 
 import ctypes
-
 from classes.Memory import Memory
 
 def main() -> None:
-    """main program"""
+    """main program
+    """
     memory_1: Memory = Memory()
-    
+
     val: int = 10
     print(memory_1.get_mem_addr(val))
 
@@ -53,6 +53,8 @@ def main() -> None:
     list4: list = list3
     list5: list = list3
     print(ctypes.c_long.from_address(id(list3)))
+    print(ctypes.c_long.from_address(id(list4)))
+    print(ctypes.c_long.from_address(id(list5)))
 
 if __name__ == "__main__":
     main()

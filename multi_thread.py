@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-"""multi threading
+"""multi threading demonstration
 """
 
 import time

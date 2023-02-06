@@ -8,26 +8,26 @@ after the outer function is already closed
 
 import time
 
-def outer_fn(message):
+def outer_function(msg) -> None:
     """outer function for closure example
     """
-    outer_message = "Outer: " + message
-    print(outer_message)
+    outer_msg = "Outer: " + msg
+    print(outer_msg)
     current_time = time.time()
     print(current_time)
 
-    def inner_fn():
+    def inner_function() -> None:
         """inner function: a closure is an inner function that has
         access to variables in the local scope of the outer function
         """
-        print("Inner: '" + outer_message + "'")
+        print("Inner: '" + outer_msg + "'")
         print("Current time: ", current_time)
-    return inner_fn()
+    return inner_function()
 
-def main():
+def main() -> None:
     """main program
     """
-    outer_fn("Hello World!")
+    outer_function("Hello World!")
 
 if __name__ == "__main__":
     main()
