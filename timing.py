@@ -34,7 +34,7 @@ def test_addition() -> int:
         return class_3
 
 def test_addition_std_lib() -> None:
-    """test addition standard bib
+    """test addition standard lib
     """
     code: str = '''vector_1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
 vector_2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))

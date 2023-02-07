@@ -17,7 +17,8 @@ def main():
     start_time = time.perf_counter()
     clc2: Calculations = Calculations()
     with Pool(processes=NUM_PROCESSES) as pool:
-        pool.map(clc2.calc_square(100), itertools.repeat(8_000_000, NUM_PROCESSES))
+        # pool.map(clc2.calc_square, itertools.repeat(8_000_000, NUM_PROCESSES))
+        print(pool.map(clc2.calc_square, [2,4,]))
 
     end_time = time.perf_counter()
     print(f"Took: {end_time - start_time} seconds")

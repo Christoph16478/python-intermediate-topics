@@ -4,12 +4,12 @@
 """special parameters
 """
 
-def standard_argumnet(a):
+def standard_argument(param_a):
     """if / and * are not present in the function
     definition, arguments may be passed to a function
     by position or by keyword
     """
-    print(a)
+    print(param_a)
 
 def pos_only_arg(a, /):
     """if positional-only, the parameters’ order matters, and the parameters
@@ -22,9 +22,9 @@ def pos_only_arg(a, /):
 def kwd_only_arg(*, a):
     """pos_only_arg(a=1) to mark parameters as keyword-only, indicating the
     parameters must be passed by keyword argument, place an * in the arguments
-    list just before the first keyword-only parameter. Use keyword-only when
-    names have meaning and the function definition is more understandable
-    by being explicit with names
+    list just before the first keyword-only parameter. use keyword-only when
+    names have meaning and the function definition is more understandable by
+    being explicit with names
     """
     print(a)
 
@@ -49,8 +49,8 @@ def main() -> None:
     print(pos_only_arg(1))
     print(pos_only_arg(my_val))
 
-    print(standard_argumnet(2))
-    print(standard_argumnet(a=2))
+    print(standard_argument(2))
+    # print(standard_argument(a=2)) # standard_argument() got an unexpected keyword argument 'a'
 
 if __name__ == "__main__":
     main()

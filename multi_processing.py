@@ -18,7 +18,7 @@ def main():
     clc1: Calculations = Calculations()
 
     for _ in range(NUM_PROCESSES):
-        processes.append(Process(target=clc1.calc_square(100), args=[8_000_000]))
+        processes.append(Process(target=clc1.calc_square, args=[2]))
 
     start_time = time.perf_counter()
 
